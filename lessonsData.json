@@ -1,0 +1,290 @@
+[
+  {
+    "lessonId": "ai-ml-dl",
+    "title": "What is AI, ML, and DL?",
+    "description": "Understanding Artificial Intelligence, Machine Learning, and Deep Learning.",
+    "storytelling": "<p>Imagine teaching a child to recognize fruits by showing pictures and naming them. This supervised guidance helps the child learn to identify new fruits on their own. This is analogous to <strong>Supervised Learning</strong>, a core part of <strong>Machine Learning</strong>.</p><p><strong>Artificial Intelligence (AI)</strong> is the broader field focused on making machines perform intelligent tasks. <strong>Machine Learning (ML)</strong> is a subset of AI that enables machines to learn from data. <strong>Deep Learning (DL)</strong> is a subset of ML using neural networks inspired by the human brain.</p>",
+    "videoUrl": "https://www.youtube.com/embed/JMUxmLyrhSk",
+    "liveCode": {
+      "language": "javascript",
+      "starterCode": "console.log('Hello AI!');"
+    },
+    "miniProject": {
+      "title": "Build a Rule-Based Chatbot",
+      "description": "Create a simple chatbot that responds to greetings. Use the starter code below and try to extend it.",
+      "starterCode": "def chatbot():\n    print(\"Hi! I'm your AI bot. Type 'bye' to exit.\")\n    while True:\n        msg = input(\"You: \").lower()\n        if msg == 'hello' or msg == 'hi':\n            print(\"Bot: Hello! How can I help you today?\")\n        elif msg == 'bye':\n            print(\"Bot: Goodbye!\")\n            break\n        else:\n            print(\"Bot: Sorry, I don't understand.\")\n\nchatbot()"
+    }
+  },
+  {
+    "lessonId": "python-basics",
+    "title": "Python Basics",
+    "description": "Learn variables, data types, loops, functions, and basic syntax in Python.",
+    "storytelling": "<p>Python is a versatile programming language widely used in AI/ML. Let's start with the basics like variables, data types, and loops.</p><p>Variables are containers for storing data values. Loops help us repeat tasks efficiently.</p>",
+    "videoUrl": "https://www.youtube.com/embed/_uQrJ0TkZlc",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "x = 10\nfor i in range(x):\n    print(i)"
+    },
+    "miniProject": {
+      "title": "Simple Calculator",
+      "description": "Build a Python calculator that can add, subtract, multiply, and divide two numbers.",
+      "starterCode": "def calculator():\n    a = float(input('Enter first number: '))\n    b = float(input('Enter second number: '))\n    op = input('Enter operation (+, -, *, /): ')\n    if op == '+':\n        print(a + b)\n    elif op == '-':\n        print(a - b)\n    elif op == '*':\n        print(a * b)\n    elif op == '/':\n        print(a / b)\n    else:\n        print('Invalid operator')\n\ncalculator()"
+    }
+  },
+  {
+    "lessonId": "data-handling",
+    "title": "Data Handling with Pandas",
+    "description": "Using Pandas for reading files, cleaning data, and basic operations.",
+    "storytelling": "<p>Data is the backbone of AI. Pandas is a powerful Python library for data manipulation and analysis. You will learn to load datasets, clean them, and perform basic operations.</p>",
+    "videoUrl": "https://www.youtube.com/embed/vmEHCJofslg",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\nprint(df.head())"
+    },
+    "miniProject": {
+      "title": "Data Cleaning and Visualization",
+      "description": "Load a dataset, clean missing values, and plot insights using Matplotlib.",
+      "starterCode": "import pandas as pd\nimport matplotlib.pyplot as plt\n\ndf = pd.read_csv('data.csv')\ndf.dropna(inplace=True)\ndf['column'].hist()\nplt.show()"
+    }
+  },
+  {
+    "lessonId": "basic-math",
+    "title": "Basic Math for AI",
+    "description": "Probability, statistics, and linear algebra basics needed for AI.",
+    "storytelling": "<p>Mathematics is essential in AI. We'll cover probability concepts, statistics, and the basics of linear algebra such as vectors and matrices.</p>",
+    "videoUrl": "https://www.youtube.com/embed/8idr1WZ1A7Q",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Calculate mean and variance\nimport numpy as np\ndata = [1,2,3,4,5]\nprint('Mean:', np.mean(data))\nprint('Variance:', np.var(data))"
+    },
+    "miniProject": {
+      "title": "Statistics Calculator",
+      "description": "Write a Python program to calculate mean, median, and variance of a dataset.",
+      "starterCode": "import statistics\n\ndata = [1, 2, 3, 4, 5, 6, 7]\nprint('Mean:', statistics.mean(data))\nprint('Median:', statistics.median(data))\nprint('Variance:', statistics.variance(data))"
+    }
+  },
+  {
+    "lessonId": "supervised-vs-unsupervised",
+    "title": "Supervised vs Unsupervised Learning",
+    "description": "Learning from labeled vs. unlabeled data.",
+    "storytelling": "<p>Supervised learning uses labeled data to teach machines to predict outputs, while unsupervised learning finds patterns in unlabeled data.</p><p>For example, spam filtering is supervised, while customer segmentation is unsupervised.</p>",
+    "videoUrl": "https://www.youtube.com/embed/0Lt9w-BxKFQ",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Example: Supervised learning with scikit-learn\nfrom sklearn.linear_model import LinearRegression\n\nX = [[1], [2], [3], [4]]\ny = [3, 6, 9, 12]\nmodel = LinearRegression()\nmodel.fit(X, y)\nprint(model.predict([[5]]))"
+    },
+    "miniProject": {
+      "title": "Titanic Survival Prediction",
+      "description": "Build a simple model to predict Titanic survivors using supervised learning.",
+      "starterCode": "import pandas as pd\nfrom sklearn.tree import DecisionTreeClassifier\n\ndf = pd.read_csv('titanic.csv')\n# Preprocess data\nmodel = DecisionTreeClassifier()\nmodel.fit(df[['feature1']], df['survived'])\nprint(model.predict([[value]]))"
+    }
+  },
+  {
+    "lessonId": "neural-networks",
+    "title": "Neural Networks",
+    "description": "How Neural Networks Work.",
+    "storytelling": "<p>Neural networks mimic how the human brain works, with layers of neurons passing signals. They are the foundation of Deep Learning.</p><p>Each neuron processes inputs and passes the output to the next layer.</p>",
+    "videoUrl": "https://www.youtube.com/embed/aircAruvnKk",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Simple perceptron example\nimport numpy as np\n\ninputs = np.array([1, 0, 1])\nweights = np.array([0.4, 0.3, 0.9])\nbias = 0.1\noutput = np.sum(inputs * weights) + bias\nprint('Output:', output)"
+    },
+    "miniProject": {
+      "title": "Digit Classification with MNIST",
+      "description": "Build a neural network to classify handwritten digits using Keras.",
+      "starterCode": "from tensorflow.keras.datasets import mnist\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Dense, Flatten\n\n(x_train, y_train), (x_test, y_test) = mnist.load_data()\n\nmodel = Sequential([\n    Flatten(input_shape=(28,28)),\n    Dense(128, activation='relu'),\n    Dense(10, activation='softmax')\n])\n\nmodel.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])\nmodel.fit(x_train, y_train, epochs=5)\nmodel.evaluate(x_test, y_test)"
+    }
+  },
+  {
+    "lessonId": "activation-functions",
+    "title": "Activation Functions",
+    "description": "Functions like ReLU and Sigmoid help neural networks learn complex patterns.",
+    "storytelling": "<p>Activation functions add non-linearity to neural networks, enabling them to model complex data. Common ones include ReLU, Sigmoid, and Tanh.</p>",
+    "videoUrl": "https://www.youtube.com/embed/3CXp1f9BySg",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "import numpy as np\n\ndef relu(x):\n    return np.maximum(0, x)\n\nprint(relu(np.array([-2, -1, 0, 1, 2])))"
+    },
+    "miniProject": {
+      "title": "Implement Activation Functions",
+      "description": "Write Python functions for ReLU and Sigmoid and test them on sample inputs.",
+      "starterCode": "import numpy as np\n\ndef sigmoid(x):\n    return 1 / (1 + np.exp(-x))\n\nprint(sigmoid(np.array([-2, 0, 2])))"
+    }
+  },
+  {
+    "lessonId": "loss-functions",
+    "title": "Loss Functions",
+    "description": "Measure how far predictions are from true values.",
+    "storytelling": "<p>Loss functions quantify the difference between predicted and actual values, guiding the learning process. Examples: Mean Squared Error (MSE), Cross-Entropy Loss.</p>",
+    "videoUrl": "https://www.youtube.com/embed/8IdeyEuzbUE",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "import numpy as np\n\n# Mean Squared Error\nactual = np.array([1, 0, 1])\npredicted = np.array([0.9, 0.1, 0.8])\nmse = np.mean((actual - predicted)**2)\nprint('MSE:', mse)"
+    },
+    "miniProject": {
+      "title": "Calculate Loss",
+      "description": "Write functions to calculate MSE and Cross-Entropy loss for sample predictions.",
+      "starterCode": "import numpy as np\n\n# Cross-Entropy Loss\ndef cross_entropy(actual, predicted):\n    epsilon = 1e-12\n    predicted = np.clip(predicted, epsilon, 1. - epsilon)\n    return -np.sum(actual * np.log(predicted))\n\nactual = np.array([1, 0, 1])\npredicted = np.array([0.9, 0.1, 0.8])\nprint('Cross-Entropy:', cross_entropy(actual, predicted))"
+    }
+  },
+  {
+    "lessonId": "backpropagation",
+    "title": "Backpropagation",
+    "description": "Optimize weights by calculating gradients of loss.",
+    "storytelling": "<p>Backpropagation calculates the gradient of the loss function with respect to each weight, enabling the network to learn by updating weights in the direction that reduces error.</p>",
+    "videoUrl": "https://www.youtube.com/embed/Ilg3gGewQ5U",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# This is a conceptual code snippet\n# for a simple backpropagation step\n\ndef backpropagation(weight, gradient, learning_rate):\n    return weight - learning_rate * gradient\n\nweight = 0.5\ngradient = 0.1\nlearning_rate = 0.01\nnew_weight = backpropagation(weight, gradient, learning_rate)\nprint('Updated weight:', new_weight)"
+    },
+    "miniProject": {
+      "title": "Implement Backpropagation Step",
+      "description": "Write a function to update weights based on gradients and learning rate.",
+      "starterCode": "def update_weight(w, grad, lr):\n    return w - lr * grad\n\nprint(update_weight(0.7, 0.2, 0.01))"
+    }
+  },
+  {
+    "lessonId": "data-preprocessing",
+    "title": "Data Preprocessing",
+    "description": "Cleaning and preparing data for AI models.",
+    "storytelling": "<p>Data preprocessing includes cleaning, normalization, and encoding to prepare raw data for machine learning models.</p>",
+    "videoUrl": "https://www.youtube.com/embed/MpKDXJsU5cI",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "import pandas as pd\n\ndf = pd.read_csv('data.csv')\ndf.fillna(df.mean(), inplace=True)\nprint(df.head())"
+    },
+    "miniProject": {
+      "title": "Preprocess Dataset",
+      "description": "Handle missing values and normalize features in a dataset.",
+      "starterCode": "from sklearn.preprocessing import MinMaxScaler\nimport pandas as pd\n\ndf = pd.read_csv('data.csv')\nscaler = MinMaxScaler()\ndf_scaled = scaler.fit_transform(df)\nprint(df_scaled[:5])"
+    }
+  },
+  {
+    "lessonId": "cnn-rnn-lstm",
+    "title": "CNN, RNN, and LSTM",
+    "description": "Deep learning architectures for vision and sequence data.",
+    "storytelling": "<p>Convolutional Neural Networks (CNNs) excel at image tasks, Recurrent Neural Networks (RNNs) and Long Short-Term Memory (LSTM) networks handle sequences like text and time series.</p>",
+    "videoUrl": "https://www.youtube.com/embed/aircAruvnKk",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# CNN and LSTM examples would be large,\n# here is a conceptual code snippet for LSTM\n\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import LSTM, Dense\n\nmodel = Sequential([\n    LSTM(50, input_shape=(10,1)),\n    Dense(1)\n])\n\nmodel.compile(optimizer='adam', loss='mse')"
+    },
+    "miniProject": {
+      "title": "Image Classification with CNN",
+      "description": "Build a CNN model to classify images from a dataset like CIFAR-10.",
+      "starterCode": "# Starter code to load CIFAR-10 and build CNN\nfrom tensorflow.keras.datasets import cifar10\nfrom tensorflow.keras.models import Sequential\nfrom tensorflow.keras.layers import Conv2D, MaxPooling2D, Flatten, Dense\n\n(x_train, y_train), (x_test, y_test) = cifar10.load_data()\n\nmodel = Sequential([\n    Conv2D(32, (3,3), activation='relu', input_shape=(32,32,3)),\n    MaxPooling2D((2,2)),\n    Flatten(),\n    Dense(64, activation='relu'),\n    Dense(10, activation='softmax')\n])\n\nmodel.compile(optimizer='adam', loss='sparse_categorical_crossentropy', metrics=['accuracy'])\nmodel.fit(x_train, y_train, epochs=10)"
+    }
+  },
+  {
+    "lessonId": "transformers",
+    "title": "Transformers and Transfer Learning",
+    "description": "State-of-the-art NLP models and transfer learning techniques.",
+    "storytelling": "<p>Transformers use attention mechanisms to handle sequential data without recurrence. Transfer learning leverages pre-trained models for new tasks efficiently.</p>",
+    "videoUrl": "https://www.youtube.com/embed/4Bdc55j80l8",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Using Hugging Face Transformers for sentiment analysis\nfrom transformers import pipeline\n\nclassifier = pipeline('sentiment-analysis')\nresult = classifier('I love AI!')\nprint(result)"
+    },
+    "miniProject": {
+      "title": "Sentiment Analysis with BERT",
+      "description": "Use a pre-trained BERT model to analyze sentiment in text data.",
+      "starterCode": "# See above liveCode snippet"
+    }
+  },
+  {
+    "lessonId": "model-deployment",
+    "title": "Model Deployment",
+    "description": "Making your AI models accessible via APIs.",
+    "storytelling": "<p>Deployment exposes models through APIs, making them usable by applications. Common tools include Flask, FastAPI, and Docker.</p>",
+    "videoUrl": "https://www.youtube.com/embed/1RHkkjC59Ec",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Simple Flask API example\nfrom flask import Flask, request, jsonify\napp = Flask(__name__)\n\n@app.route('/predict', methods=['POST'])\ndef predict():\n    data = request.json\n    # Dummy prediction\n    return jsonify({'prediction': 42})\n\nif __name__ == '__main__':\n    app.run(debug=True)"
+    },
+    "miniProject": {
+      "title": "Deploy a Model with Flask",
+      "description": "Create a REST API to serve predictions from a trained model.",
+      "starterCode": "# See above liveCode snippet"
+    }
+  },
+  {
+    "lessonId": "reinforcement-learning",
+    "title": "Reinforcement Learning",
+    "description": "Learning via rewards and punishments.",
+    "storytelling": "<p>Reinforcement learning teaches agents to make sequences of decisions by rewarding good actions and penalizing bad ones.</p>",
+    "videoUrl": "https://www.youtube.com/embed/2pWv7GOvuf0",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Simple Q-Learning example\nimport numpy as np\n\nQ = np.zeros((5,2))\n\nfor episode in range(100):\n    state = 0\n    done = False\n    while not done:\n        action = np.argmax(Q[state])\n        reward = 1 if state == 4 else 0\n        Q[state, action] += reward\n        state += 1\n        if state == 4:\n            done = True\nprint(Q)"
+    },
+    "miniProject": {
+      "title": "Train an AI Agent",
+      "description": "Use OpenAI Gym to train a reinforcement learning agent.",
+      "starterCode": "# See OpenAI Gym documentation for setup and training"
+    }
+  },
+  {
+    "lessonId": "llm-engineering",
+    "title": "Large Language Model Engineering",
+    "description": "Building applications using GPT, LangChain, and Pinecone.",
+    "storytelling": "<p>LLM engineering focuses on creating smart applications using large language models like GPT-4, chaining models, and vector databases.</p>",
+    "videoUrl": "https://www.youtube.com/embed/8L11aMN5KY8",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Example using LangChain (conceptual)\nfrom langchain import LLMChain\n\n# Initialize and use chains here"
+    },
+    "miniProject": {
+      "title": "Build a GPT-powered Q&A System",
+      "description": "Create a system that answers questions from documents using GPT and Pinecone.",
+      "starterCode": "# See LangChain and Pinecone SDK docs for examples"
+    }
+  },
+  {
+    "lessonId": "mlops",
+    "title": "MLOps",
+    "description": "Versioning, deployment, and monitoring with Docker and MLflow.",
+    "storytelling": "<p>MLOps applies DevOps principles to AI, helping deploy, monitor, and maintain models reliably.</p>",
+    "videoUrl": "https://www.youtube.com/embed/I9oVyYvGQoE",
+    "liveCode": {
+      "language": "bash",
+      "starterCode": "# Example Dockerfile for ML model\nFROM python:3.8\nWORKDIR /app\nCOPY requirements.txt ./\nRUN pip install -r requirements.txt\nCOPY . .\nCMD [\"python\", \"app.py\"]"
+    },
+    "miniProject": {
+      "title": "Dockerize a Model API",
+      "description": "Create a Docker container for your AI model API.",
+      "starterCode": "# See Docker documentation for basics"
+    }
+  },
+  {
+    "lessonId": "explainable-ai",
+    "title": "Explainable AI",
+    "description": "Tools to interpret AI model predictions (SHAP, LIME).",
+    "storytelling": "<p>Explainability tools help you understand and trust your AI models by showing which features influence predictions.</p>",
+    "videoUrl": "https://www.youtube.com/embed/6i9ThP_o-tA",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Example using SHAP\nimport shap\n# Code to explain model predictions"
+    },
+    "miniProject": {
+      "title": "Explain Your Model",
+      "description": "Use SHAP or LIME to explain predictions of a model.",
+      "starterCode": "# See SHAP and LIME documentation"
+    }
+  },
+  {
+    "lessonId": "ai-research",
+    "title": "AI Research & AGI",
+    "description": "Exploring cutting-edge AI research and Artificial General Intelligence.",
+    "storytelling": "<p>Keep up with research papers on arXiv, attend NeurIPS, and explore the future of AI including AGI.</p>",
+    "videoUrl": "https://www.youtube.com/embed/c7E8sV9NvUU",
+    "liveCode": {
+      "language": "python",
+      "starterCode": "# Setup for reading papers and experiments"
+    },
+    "miniProject": {
+      "title": "Read & Summarize Research Papers",
+      "description": "Use NLP tools to summarize AI research papers automatically.",
+      "starterCode": "# Use transformers summarization pipelines"
+    }
+  }
+]
